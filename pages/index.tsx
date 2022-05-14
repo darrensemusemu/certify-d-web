@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import kratos from '../utils/kratos';
+import indexStyles from './index.module.css';
 
 const Home: NextPage = () => {
   const [session, setSession] = useState<Session | null>(null);
@@ -38,23 +39,26 @@ const Home: NextPage = () => {
   }, [router]);
 
   return (
-    <div>
-      <h1>
-        <Link href="/login">
-          <a>Login</a>
-        </Link>
-      </h1>
-      <h1>
-        <Link href="/registration">
-          <a>Registration</a>
-        </Link>
-      </h1>
-      <h1>
-        <Link href="/verification">
-          <a>Verification</a>
-        </Link>
-      </h1>
-    </div>
+    <main className={indexStyles.container}>
+      <h1 className={indexStyles.mainHeader}>BlockLife</h1>
+      <div className={indexStyles.authOptionsContainer}>
+        <button>
+          <Link href="/login">
+            <a>Login</a>
+          </Link>
+        </button>
+        <button>
+          <Link href="/registration">
+            <a>Registration</a>
+          </Link>
+        </button>
+        <button>
+          <Link href="/verification">
+            <a>Verification</a>
+          </Link>
+        </button>
+      </div>
+    </main>
   );
 };
 
