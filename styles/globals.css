@@ -6,6 +6,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --primary-btn-color: #000;
+  --primary-btn-txt: #fff;
+  --alt-btn-color: #fff;
+  --alt-btn-txt: #000;
+}
+
 a {
   color: inherit;
   text-decoration: none;

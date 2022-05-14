@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { Button } from '../components';
 import kratos from '../utils/kratos';
 import indexStyles from './index.module.css';
 
@@ -40,23 +41,19 @@ const Home: NextPage = () => {
 
   return (
     <main className={indexStyles.container}>
-      <h1 className={indexStyles.mainHeader}>BlockLife</h1>
+      <div className={indexStyles.mainHeader}>
+        <h1>BlockLife</h1>
+      </div>
       <div className={indexStyles.authOptionsContainer}>
-        <button>
-          <Link href="/login">
-            <a>Login</a>
-          </Link>
-        </button>
-        <button>
-          <Link href="/registration">
-            <a>Registration</a>
-          </Link>
-        </button>
-        <button>
-          <Link href="/verification">
-            <a>Verification</a>
-          </Link>
-        </button>
+        <Button title="Login" onClick={() => router.push('/login')} />
+        <Button
+          title="Registration"
+          onClick={() => router.push('/registration')}
+        />
+        <Button
+          title="Verification"
+          onClick={() => router.push('/verification')}
+        />
       </div>
     </main>
   );
