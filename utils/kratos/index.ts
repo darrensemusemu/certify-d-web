@@ -6,7 +6,7 @@ export { handleFlowError, useLogoutHandler };
 
 export default new V0alpha2Api(
   new Configuration({
-    basePath: 'https://certify-d.darrensemusemu.com/.ory/kratos/public',
+    basePath: process.env.NEXT_PUBLIC_KRATOS_BASE_URL,
     baseOptions: {
       withCredentials: true,
     },
