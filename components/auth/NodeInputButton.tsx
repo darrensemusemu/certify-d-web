@@ -33,7 +33,7 @@ export function NodeInputButton<T>({
         value={attributes.value || ''}
         disabled={attributes.disabled || disabled}
       >
-        {getNodeLabel(node)}
+        {getNodeLabel(node as any)}
       </Button>
     </>
   );

@@ -165,7 +165,7 @@ export class Flow<T extends Values> extends Component<Props<T>, State<T>> {
       >
         {!hideGlobalMessages ? <Messages messages={flow.ui.messages} /> : null}
         {nodes.map((node, k) => {
-          const id = getNodeId(node) as keyof Values
+          const id = getNodeId(node as any) as keyof Values
           return (
             <Node
               key={`${id}-${k}`}
@@ -180,7 +180,7 @@ export class Flow<T extends Values> extends Component<Props<T>, State<T>> {
                       ...state,
                       values: {
                         ...state.values,
-                        [getNodeId(node)]: value
+                        [getNodeId(node as any)]: value
                       }
                     }),
                     resolve
