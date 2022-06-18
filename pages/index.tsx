@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   return (
     <main className={indexStyles.container}>
       <div className={indexStyles.mainHeader}>
-        <h1>BlockLife</h1>
+        <h1>Certify-Docs</h1>
       </div>
       <div className={indexStyles.authOptionsContainer}>
         <Button title="Login" onClick={() => router.push('/login')} />
