@@ -1,6 +1,7 @@
 {
   "recommendations": [
-    "arcanis.vscode-zipfs",
-    "dbaeumer.vscode-eslint"
+    
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode"
   ]
 }
