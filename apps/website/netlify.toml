@@ -1,0 +1,2 @@
+[build]
+    ignore = "npx nx-ignore website"
