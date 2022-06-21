@@ -1,2 +1,10 @@
 [build]
-    ignore = "npx nx-ignore website"
+  command = "yarn nx build website"
+  ignore = "yarn --cwd ../../ run nx-ignore website"
+  publish = ".next"
+
+[build.environment]
+  KRATOS_PUBLIC_URL = "not so secret :^)"
+
+[context.production.environment]
+  KRATOS_PUBLIC_URL = "not so secret"
