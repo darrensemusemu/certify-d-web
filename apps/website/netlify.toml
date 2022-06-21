@@ -1,6 +1,6 @@
 [build]
   command = "yarn nx build website"
-  ignore = "yarn --cwd ../../ run nx-ignore website"
+  ignore = "yarn install && yarn --cwd ../../ run nx-ignore website"
   publish = ".next"
 
 [build.environment]
