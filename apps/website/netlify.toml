@@ -1,2 +1,9 @@
 [build]
-    ignore = "npx nx-ignore website"
+  ignore = "cd ../../ && npx nx-ignore website && cd apps/website"
+
+[build.environment]
+  KRATOS_PUBLIC_URL = "not so secret :^)"
+  NETLIFY_USE_YARN = "true" 
+
+[context.production.environment]
+  KRATOS_PUBLIC_URL = "not so secret"
