@@ -1,7 +1,5 @@
 [build]
-  command = "yarn nx build website"
-  ignore = "cd ../../ && npx nx-ignore website"
-  publish = ".next"
+  ignore = "cd ../../ && npx nx-ignore website && cd apps/website"
 
 [build.environment]
   KRATOS_PUBLIC_URL = "not so secret :^)"
