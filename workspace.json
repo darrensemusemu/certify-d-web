@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "staff-webapp": "apps/staff-webapp",
+    "webapp": "apps/webapp",
     "website": "apps/website"
   }
 }
