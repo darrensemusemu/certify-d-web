@@ -1896,13 +1896,6 @@
     "@svgr/plugin-jsx" "^6.2.1"
     "@svgr/plugin-svgo" "^6.2.0"
 
-"@swc/helpers@^0.3.16":
-  version "0.3.17"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.3.17.tgz#7c1b91f43c77e2bba99492162a498d465ef253d5"
-  integrity sha512-tb7Iu+oZ+zWJZ3HJqwx8oNwSDIU440hmVMDPhpACWQWnrZHK99Bxs70gT1L2dnr5Hg50ZRWEFkQCAnOVVV0z1Q==
-  dependencies:
-    tslib "^2.4.0"
-
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
@@ -6142,16 +6135,7 @@ nwsapi@^2.2.0:
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
   integrity sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==
 
-nx-ignore@^14.2.0:
-  version "14.2.0"
-  resolved "https://registry.yarnpkg.com/nx-ignore/-/nx-ignore-14.2.0.tgz#a26778a2f246d2d782587fde595ae798d1c722a2"
-  integrity sha512-HTjZYy3+oaELjYszyt7MFS4DwPwAjBQg8R42DJTuyW53k+TPJQwPr7x0Bzu7qgEtJ5HZMphu3R3RnbGard1XEA==
-  dependencies:
-    "@swc/helpers" "^0.3.16"
-    nx "^14.1.9"
-    typescript "^4.6.2"
-
-nx@14.3.6, nx@^14.1.9:
+nx@14.3.6:
   version "14.3.6"
   resolved "https://registry.yarnpkg.com/nx/-/nx-14.3.6.tgz#0b30dbe96df2cd62cb68c9d3609e2dc3219b0a20"
   integrity sha512-jBgqXEkRalo8PwXJzO4HVNN3P5pqyL5VawyNd34qPl+4t2XlDRqoK0J74i8liPGdKPBB1HjM2K1u+QNF2ROvQA==
@@ -7996,7 +7980,7 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2, tslib@^2.3.0, tslib@^2.3.1, tslib@^2.4.0:
+tslib@^2, tslib@^2.3.0, tslib@^2.3.1:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
@@ -8057,7 +8041,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@4.7.4, typescript@^4.6.2, typescript@~4.7.2:
+typescript@4.7.4, typescript@~4.7.2:
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
