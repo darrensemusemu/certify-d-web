@@ -2,9 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "company-webapp":"apps/company-webapp",
+    "company-webapp": "apps/company-webapp",
     "staff-webapp": "apps/staff-webapp",
     "webapp": "apps/webapp",
+    "webapp-e2e": "apps/webapp-e2e",
     "website": "apps/website"
   }
 }
