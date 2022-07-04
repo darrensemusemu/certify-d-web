@@ -1,5 +1,5 @@
 [build]
-  ignore = "cd ../../ && npx nx-ignore website && cd apps/website"
+  ignore = "cd ../../ && npx nx-ignore staff-webapp && cd apps/staff-webapp"
 
 [build.environment]
   KRATOS_PUBLIC_URL = "not so secret :^)"
