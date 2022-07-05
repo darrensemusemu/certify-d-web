@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "company-webapp": "apps/company-webapp",
+    "shared-ui": "libs/shared/ui",
     "staff-webapp": "apps/staff-webapp",
     "webapp": "apps/webapp",
     "webapp-e2e": "apps/webapp-e2e",
