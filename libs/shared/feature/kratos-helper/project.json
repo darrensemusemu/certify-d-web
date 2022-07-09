@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/feature/kratos-helper/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/feature/kratos-helper",
+        "tsConfig": "libs/shared/feature/kratos-helper/tsconfig.lib.json",
+        "project": "libs/shared/feature/kratos-helper/package.json",
+        "entryFile": "libs/shared/feature/kratos-helper/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/shared/feature/kratos-helper/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/feature/kratos-helper/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/feature/kratos-helper"],
+      "options": {
+        "jestConfig": "libs/shared/feature/kratos-helper/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

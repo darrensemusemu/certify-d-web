@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@certify-d/kratos-helper": [
+        "libs/shared/feature/kratos-helper/src/index.ts"
+      ],
       "@certify-d/shared-ui": ["libs/shared/ui/src/index.ts"]
     }
   },

@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "company-webapp": "apps/company-webapp",
+    "shared-feature-kratos-helper": "libs/shared/feature/kratos-helper",
     "shared-ui": "libs/shared/ui",
     "staff-webapp": "apps/staff-webapp",
     "webapp": "apps/webapp",
