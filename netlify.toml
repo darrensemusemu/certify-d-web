@@ -1,10 +1,11 @@
 [build]
+
+  base = "."
+  
   command = """yarn workspace @certify-d/shared-ui install &&\
     yarn workspace @certify-d/kratos-helper install &&\
     nx run $PROJECT_NAME:build:production
     """
-
-  publish = "dist/apps/$PROJECT_NAME/.next"
 
   ignore = "npx nx-ignore $PROJECT_NAME"
 
