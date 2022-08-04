@@ -1,2 +1,34 @@
-.page {
+// .page {
+// }
+
+.ctaContainer {
+  height: 80vh;
+}
+
+.ctaTestimony {
+  position: absolute;
+  right: -64px;
+  bottom: 10%;
+}
+
+.ctaInfoContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  height: 100%;
+}
+
+.ctaInfo {
+  width: 60%;
+}
+
+.ctaArrow {
+  height: 10vh;
+  margin-left: 64px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    font-weight: 900;
+  }
 }
