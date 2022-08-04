@@ -9,6 +9,7 @@
     "webapp": "apps/webapp",
     "webapp-e2e": "apps/webapp-e2e",
     "website": "apps/website",
-    "website-e2e": "apps/website-e2e"
+    "website-e2e": "apps/website-e2e",
+    "website-ui": "libs/website/ui"
   }
 }
