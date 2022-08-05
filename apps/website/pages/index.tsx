@@ -5,10 +5,16 @@ import {
   Link,
   Text,
 } from '@certify-d/shared-ui';
-import { TestimonyCard } from '@certify-d/website-ui';
+import {
+  FeatureCard,
+  FeatureCardProps,
+  TestimonyCard,
+  UsageStat,
+} from '@certify-d/website-ui';
 import { TriangleDownIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import { Children } from 'react';
 import styles from './index.module.scss';
 
 export function Index() {
@@ -50,6 +56,7 @@ export function Index() {
           </div>
         </HomeContainer>
       </div>
+
       <div className={styles.ctaArrow}>
         <NextLink href="#Product" passHref>
           <Link>
@@ -58,11 +65,50 @@ export function Index() {
           </Link>
         </NextLink>
       </div>
-      <div id="Product"></div>
+
+      <div id="Product">
+        <div className={styles.productUsageContanier}>
+          <UsageStat usage="100+" description="Ceritified Documents" />
+          <div className={styles.productUsageHLine} />
+          <UsageStat usage="100+" description="Active Users" />
+        </div>
+
+        <div className={styles.productInfoContainer}>
+          {Children.toArray(
+            featureInfo.map((item, idx) => (
+              <>
+                <FeatureCard {...item} />
+                <hr className={styles.productInfoSpacing} />
+              </>
+            ))
+          )}
+        </div>
+      </div>
+
       <div id="Pricing"></div>
+
       <div id="ContactUs"></div>
     </div>
   );
 }
+
+const featureInfo: FeatureCardProps[] = [
+  {
+    header: ['Upload & Certify Documents'],
+    text: 'Save time through our innovative, first and only, online document certification platform.',
+    illustationSrc: '/static/images/girl-with-latop.svg',
+  },
+  {
+    header: ['Commissioner of Oaths'],
+    text: 'Trsuted to assist the community certify documents as true copies of the original documents.',
+    textPosition: 'left',
+    backgroundColor: 'none',
+  },
+  {
+    header: ['Save time', 'Save money', 'Certify with Certify-d'],
+    textPosition: 'left',
+    illustationSrc: '/static/images/happy-dancing.svg',
+  },
+];
 
 export default Index;
