@@ -1,6 +1,9 @@
 // .page {
 // }
 
+/*
+ CALL TO ACTION
+*/
 .ctaContainer {
   height: 80vh;
 }
@@ -24,11 +27,36 @@
 
 .ctaArrow {
   height: 10vh;
-  margin-left: 64px;
   text-align: center;
   cursor: pointer;
 
   &:hover {
     font-weight: 900;
   }
+}
+
+/*
+  PRODUCT INFO
+*/
+
+.productUsageContanier {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.productUsageHLine {
+  border-left: 1px solid #000;
+  margin: 0px 32px;
+}
+
+.productInfoContainer {
+  width: 70%;
+  margin: auto;
+}
+
+.productInfoSpacing {
+  height: 48px;
+  border: 0;
 }
