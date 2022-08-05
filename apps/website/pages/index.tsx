@@ -5,7 +5,7 @@ import {
   Link,
   Text,
 } from '@certify-d/shared-ui';
-import { TestimonyCard } from '@certify-d/website-ui';
+import { TestimonyCard, UsageStat } from '@certify-d/website-ui';
 import { TriangleDownIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -58,8 +58,17 @@ export function Index() {
           </Link>
         </NextLink>
       </div>
-      <div id="Product"></div>
+
+      <div id="Product">
+        <div className={styles.productUsageContanier}>
+          <UsageStat usage="100+" description="Ceritified Documents" />
+          <div className={styles.productUsageHLine} />
+          <UsageStat usage="100+" description="Active Users" />
+        </div>
+      </div>
+
       <div id="Pricing"></div>
+
       <div id="ContactUs"></div>
     </div>
   );

@@ -1,7 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import { CSSProperties, ReactNode } from 'react';
 import { Text } from '@certify-d/shared-ui';
-import styles from './UsageStat.module.scss';
 
 export interface UsageStatProps {
   usage: string;
