@@ -61,7 +61,7 @@ export function Navbar(props: NavbarProps) {
               className={styles['centerItems']}
             >
               <Button
-                w={'120px'}
+                w={'8em'}
                 bg="#fff"
                 variant={'solid'}
                 alignSelf={'flex-end'}

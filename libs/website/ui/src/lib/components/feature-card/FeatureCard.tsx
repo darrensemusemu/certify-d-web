@@ -15,7 +15,7 @@ export function FeatureCard(props: FeatureCardProps) {
   return (
     <Flex
       w="100%"
-      h="440px"
+      h="27.5em"
       bg={props.backgroundColor ?? 'muted.100'}
       direction={props.textPosition === 'left' ? 'row-reverse' : 'row'}
     >
@@ -28,7 +28,7 @@ export function FeatureCard(props: FeatureCardProps) {
       />
       <Box
         p={4}
-        w="450px"
+        w="28em"
         className={props.text ? styles['header'] : styles['headerCenter']}
       >
         <Box>

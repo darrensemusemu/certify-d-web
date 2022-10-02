@@ -6,7 +6,7 @@ import { StyleFunctionProps } from '@chakra-ui/theme-tools';
 const ButtonStyle: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: '0',
-    maxWidth: '250px',
+    maxWidth: '15.5em',
     fontWeight: 'normal'
   },
   sizes: {},

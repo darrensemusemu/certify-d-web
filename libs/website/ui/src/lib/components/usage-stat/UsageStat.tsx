@@ -8,7 +8,7 @@ export interface UsageStatProps {
 
 export function UsageStat(props: UsageStatProps) {
   return (
-    <Flex px={10} py={4} minW="300px" direction="column" alignItems="center">
+    <Flex px={10} py={4} minW="18.75em" direction="column" alignItems="center">
       <Text fontSize={'4xl'} fontWeight="semibold">
         {props.usage}
       </Text>
