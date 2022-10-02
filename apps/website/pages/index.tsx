@@ -67,7 +67,7 @@ export function Index() {
       </div>
 
       <div id="Product">
-        <div className={styles.productUsageContanier}>
+        <div className={styles.productUsageContainer}>
           <UsageStat usage="100+" description="Ceritified Documents" />
           <div className={styles.productUsageHLine} />
           <UsageStat usage="100+" description="Active Users" />
@@ -85,7 +85,17 @@ export function Index() {
         </div>
       </div>
 
-      <div id="Pricing"></div>
+      <div id="Pricing" className={styles.pricingContainer}>
+        <Heading
+          lineHeight={1.25}
+          my={4}
+          as="h1"
+          size={'2xl'}
+          fontWeight={'extrabold'}
+        >
+          Convenient Pricing
+        </Heading>
+      </div>
 
       <div id="ContactUs"></div>
     </div>
@@ -96,18 +106,18 @@ const featureInfo: FeatureCardProps[] = [
   {
     header: ['Upload & Certify Documents'],
     text: 'Save time through our innovative, first and only, online document certification platform.',
-    illustationSrc: '/static/images/girl-with-latop.svg',
+    illustrationSrc: '/static/images/girl-with-latop.svg',
   },
   {
     header: ['Commissioner of Oaths'],
-    text: 'Trsuted to assist the community certify documents as true copies of the original documents.',
+    text: 'Trusted to assist the community certify documents as true copies of the original documents.',
     textPosition: 'left',
     backgroundColor: 'none',
   },
   {
     header: ['Save time', 'Save money', 'Certify with Certify-d'],
     textPosition: 'left',
-    illustationSrc: '/static/images/happy-dancing.svg',
+    illustrationSrc: '/static/images/happy-dancing.svg',
   },
 ];
 

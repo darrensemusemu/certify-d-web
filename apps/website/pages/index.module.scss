@@ -40,7 +40,7 @@
   PRODUCT INFO
 */
 
-.productUsageContanier {
+.productUsageContainer {
   display: flex;
   justify-content: center;
   padding-top: 1.5em;
@@ -60,4 +60,13 @@
 .productInfoSpacing {
   height: 4em;
   border: 0;
+}
+
+/*
+  PRICING INFO
+*/
+.pricingContainer {
+  display: none; // pricing info net yet available
+  // display: flex;
+  // justify-content: center;
 }

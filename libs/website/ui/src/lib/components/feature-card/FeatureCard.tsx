@@ -6,7 +6,7 @@ import { Children } from 'react';
 export interface FeatureCardProps {
   header: string[];
   text?: string;
-  illustationSrc?: string;
+  illustrationSrc?: string;
   textPosition?: 'left' | 'right';
   backgroundColor?: string;
 }
@@ -23,7 +23,7 @@ export function FeatureCard(props: FeatureCardProps) {
         w="50%"
         className={styles['illustationContainer']}
         sx={{
-          backgroundImage: props.illustationSrc,
+          backgroundImage: props.illustrationSrc,
         }}
       />
       <Box
