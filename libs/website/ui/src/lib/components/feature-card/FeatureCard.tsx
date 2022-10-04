@@ -7,7 +7,6 @@ export interface FeatureCardProps {
   header: string[];
   text?: string;
   illustrationSrc?: string;
-  textPosition?: 'left' | 'right';
   backgroundColor?: string;
 }
 
@@ -15,37 +14,45 @@ export function FeatureCard(props: FeatureCardProps) {
   return (
     <Flex
       w="100%"
-      h="27.5em"
+      minH={{ base: '100%', md: '20em', lg: '30em' }}
       bg={props.backgroundColor ?? 'muted.100'}
-      direction={props.textPosition === 'left' ? 'row-reverse' : 'row'}
+      borderRadius="lg"
+      direction={{ base: 'column-reverse', md: 'row' }}
+      position="relative"
     >
       <Box
-        w="50%"
-        className={styles['illustationContainer']}
-        sx={{
-          backgroundImage: props.illustrationSrc,
-        }}
+        w={{ base: '100%', md: '50%' }}
+        h={{ base: '8em', md: '12em', lg: '16em' }}
+        className={styles['illustrationContainer']}
+        display={props.illustrationSrc ? 'inherit' : 'none'}
+        sx={{ backgroundImage: props.illustrationSrc }}
       />
-      <Box
-        p={4}
-        w="28em"
-        className={props.text ? styles['header'] : styles['headerCenter']}
+      <Flex
+        direction={'column'}
+        justify="center"
+        px={{ base: 4, md: 8 }}
+        py={8}
+        w={{ base: '100%', md: '50%' }}
       >
         <Box>
           {Children.toArray(
             props.header.map((item) => (
-              <Text fontSize="4xl" fontWeight="semibold">
+              <Text
+                fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+                fontWeight="semibold"
+                py={4}
+              >
                 {item}
               </Text>
             ))
           )}
         </Box>
         {props.text && (
-          <Text fontSize="3xl" className={styles['text']}>
+          <Text fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }} py={4}>
             {props.text}
           </Text>
         )}
-      </Box>
+      </Flex>
     </Flex>
   );
 }

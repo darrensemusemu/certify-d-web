@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "chakra"
-    ]
+    ],
+    "editor.formatOnSave": true
 }

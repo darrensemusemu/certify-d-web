@@ -6,21 +6,9 @@
  * }
 */
 
-
-.illustationContainer {
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-
-.header {
-    margin-top: 4em;
-}
-
-.headerCenter {
-    display: flex;
-    align-items: center;
-}
-
-.text {
-    margin-top: 4em;
+.illustrationContainer {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  align-self: center;
 }

@@ -9,27 +9,28 @@
 }
 
 .ctaTestimony {
-  position: absolute;
-  right: -2em;
-  bottom: 10%;
-  z-index: 1;
-}
-
-.ctaInfoContainer {
   display: flex;
-  justify-content: center;
-  margin-top: 4em;
-  height: 100%;
+  align-items: center;
+  position: relative;
 }
 
-.ctaInfo {
-  width: 60%;
+@media (min-width: 30em) {
+  .ctaTestimony {
+    position: absolute;
+    right: -2em;
+    bottom: 10%;
+    z-index: 1;
+  }
 }
 
 .ctaArrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 10vh;
   text-align: center;
   cursor: pointer;
+  margin-top: 1em;
 
   &:hover {
     font-weight: 900;
@@ -45,6 +46,8 @@
   justify-content: center;
   padding-top: 1.5em;
   padding-bottom: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .productUsageHLine {
@@ -53,8 +56,12 @@
 }
 
 .productInfoContainer {
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
   margin: auto;
+  margin-top: 2em;
 }
 
 .productInfoSpacing {
@@ -67,6 +74,4 @@
 */
 .pricingContainer {
   display: none; // pricing info net yet available
-  // display: flex;
-  // justify-content: center;
 }

@@ -10,17 +10,27 @@ export interface HomeContainerProps {
 export function HomeContainer(props: HomeContainerProps) {
   return (
     <Grid templateColumns={'repeat(12, 1fr)'} h="100%">
-      <GridItem colSpan={6} w="100%" h="100%">
+      <GridItem colSpan={{ base: 12, lg: 5 }} w="100%" h="100%">
         {props.children}
       </GridItem>
-      <GridItem colSpan={2} w="100%" h="100%" position={'relative'}>
+      <GridItem
+        colSpan={{ base: 12, sm: 6, md: 4, lg: 2 }}
+        w="100%"
+        h="100%"
+        position={'relative'}
+      >
         {props.secondaryIllustration}
       </GridItem>
-      <GridItem colSpan={4} w="100%" h="100%" pr={16}>
+      <GridItem
+        colSpan={{ base: 3, sm: 6, md: 8, lg: 5 }}
+        display={{ base: 'none', sm: 'inherit' }}
+        w="100%"
+        h="100%"
+      >
         <Flex
           bg="brand.100"
           h="100%"
-          p={8}
+          p={{ base: 8 }}
           flexDirection="column"
           alignItems={'center'}
           justifyContent="end"

@@ -71,7 +71,7 @@ export function Navbar(props: NavbarProps) {
         </GridItem>
       </Grid>
       <Box display={{ base: isMenuOpen ? 'block' : 'none', lg: 'none' }} p={2}>
-        <Box borderRadius={'0.5em'} bg="muted.100" p={4} pt={8}>
+        <Box borderRadius={'lg'} bg="muted.100" p={4} pt={8}>
           <MenuOptions
             items={props.links}
             isOpen={isMenuOpen}

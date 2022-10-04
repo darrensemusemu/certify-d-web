@@ -12,6 +12,7 @@ import {
   UsageStat,
 } from '@certify-d/website-ui';
 import { TriangleDownIcon } from '@chakra-ui/icons';
+import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { Children } from 'react';
@@ -40,20 +41,18 @@ export function Index() {
           illustration={phoneIllustration}
           secondaryIllustration={reviewerCard}
         >
-          <div className={styles.ctaInfoContainer}>
-            <div className={styles.ctaInfo}>
-              <Text my={4}>Welcome to Certify-d</Text>
-              <Heading lineHeight={1.25} my={4} as="h1" size={'3xl'}>
-                Certify all your documents online with Certify-d
-              </Heading>
-              <Text my={4}>
-                Generate ceritified copies of official primary documents
-              </Text>
-              <Button my={4} w={120}>
-                Get started
-              </Button>
-            </div>
-          </div>
+          <Box className={styles.ctaInfoContainer} p={{ base: 4, lg: 16 }}>
+            <Text my={4}>Welcome to Certify-d</Text>
+            <Heading lineHeight={1.25} my={4} as="h1" size={'3xl'}>
+              Certify all your documents online with Certify-d
+            </Heading>
+            <Text my={4}>
+              Generate certified copies of official primary documents
+            </Text>
+            <Button my={4} w={120}>
+              Get started
+            </Button>
+          </Box>
         </HomeContainer>
       </div>
 
@@ -68,18 +67,25 @@ export function Index() {
 
       <div id="Product">
         <div className={styles.productUsageContainer}>
-          <UsageStat usage="100+" description="Ceritified Documents" />
+          <Box w={{ base: '40%', lg: '18.75em' }}>
+            <UsageStat usage="100+" description="Certified Documents" />
+          </Box>
           <div className={styles.productUsageHLine} />
-          <UsageStat usage="100+" description="Active Users" />
+          <Box w={{ base: '40%', lg: '18.75em' }}>
+            <UsageStat usage="100+" description="Active Users" />
+          </Box>
         </div>
 
         <div className={styles.productInfoContainer}>
           {Children.toArray(
             featureInfo.map((item, idx) => (
-              <>
+              <Box
+                key={item.text}
+                p={{ base: 4 }}
+                width={{ base: '100%', lg: '70%' }}
+              >
                 <FeatureCard {...item} />
-                <hr className={styles.productInfoSpacing} />
-              </>
+              </Box>
             ))
           )}
         </div>
@@ -111,12 +117,10 @@ const featureInfo: FeatureCardProps[] = [
   {
     header: ['Commissioner of Oaths'],
     text: 'Trusted to assist the community certify documents as true copies of the original documents.',
-    textPosition: 'left',
     backgroundColor: 'none',
   },
   {
     header: ['Save time', 'Save money', 'Certify with Certify-d'],
-    textPosition: 'left',
     illustrationSrc: '/static/images/happy-dancing.svg',
   },
 ];
