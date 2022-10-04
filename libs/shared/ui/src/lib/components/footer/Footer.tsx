@@ -11,9 +11,9 @@ const linkData = [
   {
     header: 'Company',
     links: [
-      { title: 'Terms and  conditions', href: '/about/terms-and-conditions' },
-      { title: 'Privacy Policy', href: '/about/privacy-policy' },
-      { title: 'Cookie Policy', href: '/about/cookie-policy' },
+      { title: 'Terms and  conditions', href: '/about/terms' },
+      { title: 'Privacy Policy', href: '/about/privacy' },
+      { title: 'Cookie Policy', href: '/about/cookies' },
     ],
   },
   {

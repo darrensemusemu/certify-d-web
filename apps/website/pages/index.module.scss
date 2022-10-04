@@ -4,8 +4,11 @@
 /*
  CALL TO ACTION
 */
-.ctaContainer {
-  height: 80vh;
+
+@media (min-width: 48em) {
+  .ctaContainer {
+    height: 80vh;
+  }
 }
 
 .ctaTestimony {

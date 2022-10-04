@@ -9,10 +9,10 @@ import Head from 'next/head';
 import './styles.css';
 
 const navbarLinks: NavbarLink[] = [
-  { title: 'Home', link: '#Home' },
-  { title: 'Product', link: '#Product' },
+  { title: 'Home', link: '/#Home' },
+  { title: 'Product', link: '/#Product' },
   // { title: 'Pricing', link: '#Pricing' }, TODO: pricing info not yet available
-  { title: 'Contact Us', link: '#ContactUs' },
+  { title: 'Contact Us', link: '/#ContactUs' },
 ];
 
 function CustomApp({ Component, pageProps }: AppProps) {
