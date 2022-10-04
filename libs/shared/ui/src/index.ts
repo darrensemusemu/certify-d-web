@@ -1,3 +1,5 @@
+export * from './lib/components/logo/Logo';
+export * from './lib/components/footer/Footer';
 export * from './lib/components/link/Link';
 export * from './lib/components/icon/Icon';
 export * from './lib/components/heading/Heading';

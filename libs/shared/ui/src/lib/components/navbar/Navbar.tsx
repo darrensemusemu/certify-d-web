@@ -1,13 +1,10 @@
-import { Button } from '@certify-d/shared-ui';
+import { Button, Logo, Link } from '@certify-d/shared-ui';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { Box, Grid, GridItem, HStack, Link, Stack } from '@chakra-ui/react';
-import { ReactNode, useState } from 'react';
-import Heading from '../heading/Heading';
+import { Box, Grid, GridItem, HStack, Stack } from '@chakra-ui/react';
+import { useState } from 'react';
 import styles from './Navbar.module.scss';
 
 export interface NavbarProps {
-  icon?: ReactNode;
-  header: ReactNode;
   links: NavbarLink[];
   extraBtn?: NavbarLinkExtraBtn;
 }
@@ -38,10 +35,7 @@ export function Navbar(props: NavbarProps) {
         >
           <Stack pl={{ base: 4, lg: 16 }} spacing={'32'} direction={'row'}>
             <HStack spacing={'4'}>
-              {props.icon && props.icon}
-              <Heading fontSize={'3xl'} fontWeight="extrabold">
-                {props.header}
-              </Heading>
+              <Logo variant="light" />
             </HStack>
           </Stack>
         </GridItem>

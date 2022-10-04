@@ -1,7 +1,11 @@
-import { Navbar, NavbarLink, SharedUiProvider } from '@certify-d/shared-ui';
+import {
+  Footer,
+  Navbar,
+  NavbarLink,
+  SharedUiProvider,
+} from '@certify-d/shared-ui';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import Image from 'next/image';
 import './styles.css';
 
 const navbarLinks: NavbarLink[] = [
@@ -18,24 +22,16 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Certify-d</title>
       </Head>
       <Navbar
-        header="Certify-d"
         links={navbarLinks}
-        icon={
-          <Image
-            alt="Logo"
-            width={34}
-            height={34}
-            src={'/static/images/light-logo.svg'}
-          />
-        }
         extraBtn={{
           title: 'Login',
-          onClick: () => console.log('TODO: handle click'),
+          onClick: () => console.log('//TODO: handle click'),
         }}
       />
       <main className="app">
         <Component {...pageProps} />
       </main>
+      <Footer />
     </SharedUiProvider>
   );
 }
