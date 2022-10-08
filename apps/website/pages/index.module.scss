@@ -1,2 +1,80 @@
-.page {
+// .page {
+// }
+
+/*
+ CALL TO ACTION
+*/
+
+@media (min-width: 48em) {
+  .ctaContainer {
+    height: 80vh;
+  }
+}
+
+.ctaTestimony {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 30em) {
+  .ctaTestimony {
+    position: absolute;
+    right: -2em;
+    bottom: 10%;
+    z-index: 1;
+  }
+}
+
+.ctaArrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1em;
+
+  &:hover {
+    font-weight: 900;
+  }
+}
+
+/*
+  PRODUCT INFO
+*/
+
+.productUsageContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.productUsageHLine {
+  border-left: 1px solid #000;
+  margin: 0px 2em;
+}
+
+.productInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.productInfoSpacing {
+  height: 4em;
+  border: 0;
+}
+
+/*
+  PRICING INFO
+*/
+.pricingContainer {
+  display: none; // pricing info net yet available
 }

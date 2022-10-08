@@ -4,17 +4,28 @@ import {
 } from '@ory/kratos-client';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 import kratos from '../../config/kratos';
 import useLogoutHandler from '../../hooks/use-logout-handler/useLogoutHandler';
 import { handleFlowError } from '../../utils/errors';
 import { Flow } from '../auth-flow';
 import { AxiosError } from 'axios';
 
-/* eslint-disable-next-line */
-export interface LoginProps {}
+interface IAccountLinkBtn {
+  href: string;
+  passHref: boolean;
+}
 
-export function Login(props: LoginProps) {
+export interface LoginProps {
+  createAccountBtn: React.FC<IAccountLinkBtn>;
+  registerAccountBtn: React.FC<IAccountLinkBtn>;
+}
+
+export function Login({
+  createAccountBtn: CreateAccountBtn,
+  registerAccountBtn: RegisterAccountBtn,
+  ...props
+}: LoginProps) {
   const [flow, setFlow] = useState<SelfServiceLoginFlow>();
 
   // Get ?flow=... from the URL
@@ -103,13 +114,9 @@ export function Login(props: LoginProps) {
         <div onClick={onLogout}>Log out</div>
       ) : (
         <>
-          {/* TODO: use custom link component */}
-          <Link href="/auth/registration" passHref>
-            <div>Create account</div>
-          </Link>
-          <Link href="/auth/recovery" passHref>
-            <div>Recover your account</div>
-          </Link>
+          <CreateAccountBtn passHref href="/auth/registration" />
+          <br />
+          <RegisterAccountBtn passHref href="/auth/recovery" />
         </>
       )}
     </>
