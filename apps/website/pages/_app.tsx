@@ -6,6 +6,7 @@ import {
 } from '@certify-d/shared-ui';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import './styles.css';
 
 const navbarLinks: NavbarLink[] = [
@@ -16,6 +17,8 @@ const navbarLinks: NavbarLink[] = [
 ];
 
 function CustomApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <SharedUiProvider>
       <Head>
@@ -25,7 +28,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         links={navbarLinks}
         extraBtn={{
           title: 'Login',
-          onClick: () => console.log('//TODO: handle click'),
+          onClick: () => router.replace('/dash/auth/login'),
         }}
       />
       <main className="app">
