@@ -11,7 +11,6 @@ import { AxiosError } from 'axios';
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
 import { IAccountLinkBtn } from '../login/Login';
 
-/* eslint-disable-next-line */
 export interface RegistrationProps {
   loginAccountBtn: React.FC<IAccountLinkBtn>;
   rightNode?: ReactNode;
@@ -44,7 +43,17 @@ export function Registration({
         .then(({ data }) => {
           setFlow(data);
         })
-        .catch(handleFlowError(router, 'registration', setFlow));
+        .catch(handleFlowError(router, 'registration', setFlow))
+        .catch((err: AxiosError) => {
+          // If the previous handler did not catch the error it's most likely a form validation error
+          if (err.response?.status === 400) {
+            // Yup, it is!
+            setFlow(err.response?.data as any);
+            return;
+          }
+
+          return Promise.reject(err);
+        });
       return;
     }
 
@@ -54,7 +63,6 @@ export function Registration({
         returnTo ? String(returnTo) : undefined
       )
       .then(({ data }) => {
-        console.log(data);
         setFlow(data);
       })
       .catch(handleFlowError(router, 'registration', setFlow));
