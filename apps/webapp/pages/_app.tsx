@@ -2,17 +2,15 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
-import { Heading, Navbar, SharedUiProvider } from '@certify-d/shared-ui';
-import { useRouter } from 'next/router';
+import { Navbar, SharedUiProvider } from '@certify-d/shared-ui';
 
 function CustomApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
   return (
     <SharedUiProvider>
       <Head>
         <title>Welcome to webapp!</title>
       </Head>
+      <Navbar links={[]} />
       <main className="app">
         <Component {...pageProps} />
       </main>

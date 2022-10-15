@@ -12,7 +12,7 @@ export const Message = ({ message }: MessageProps) => {
       status={message.type === 'error' ? 'error' : 'info'}
     >
       <AlertIcon />
-      There was an error processing your request
+      {message.text}
     </Alert>
   );
 };
