@@ -1,4 +1,8 @@
 {
-  "cSpell.words": ["chakra", "kratos"],
+  "cSpell.words": [
+    "chakra",
+    "kratos",
+    "testid"
+  ],
   "editor.formatOnSave": true
 }

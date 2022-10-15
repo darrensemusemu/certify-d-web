@@ -5,9 +5,7 @@ import { NextPage } from 'next';
 const LoginPage: NextPage = () => {
   return (
     <div>
-      <Input />
       <Registration />
-      <Button>Sign in</Button>
     </div>
   );
 };

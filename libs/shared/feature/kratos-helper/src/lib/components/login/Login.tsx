@@ -10,6 +10,7 @@ import useLogoutHandler from '../../hooks/use-logout-handler/useLogoutHandler';
 import { handleFlowError } from '../../utils/errors';
 import { Flow } from '../auth-flow';
 import { AxiosError } from 'axios';
+import { Grid, GridItem } from '@chakra-ui/react';
 
 interface IAccountLinkBtn {
   href: string;
@@ -107,19 +108,21 @@ export function Login({
           })
       );
   return (
-    <>
-      <Flow onSubmit={onSubmit} flow={flow} />
-
-      {aal || refresh ? (
-        <div onClick={onLogout}>Log out</div>
-      ) : (
-        <>
-          <CreateAccountBtn passHref href="/auth/registration" />
-          <br />
-          <RegisterAccountBtn passHref href="/auth/recovery" />
-        </>
-      )}
-    </>
+    <Grid templateColumns={'repeat(12, 1fr)'}>
+      <GridItem p={{ base: 4, lg: 8 }} colSpan={{ base: 12, lg: 6 }}>
+        <Flow flow={flow} onSubmit={onSubmit} />
+        {aal || refresh ? (
+          <div onClick={onLogout}>Log out</div>
+        ) : (
+          <>
+            <CreateAccountBtn passHref href="/auth/registration" />
+            <br />
+            <RegisterAccountBtn passHref href="/auth/recovery" />
+          </>
+        )}
+      </GridItem>
+      <GridItem colSpan={{ base: 12, lg: 6 }}></GridItem>
+    </Grid>
   );
 }
 

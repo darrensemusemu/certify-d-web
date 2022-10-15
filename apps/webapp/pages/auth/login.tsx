@@ -1,20 +1,23 @@
 import { Login } from '@certify-d/kratos-helper';
-import { Link } from '@certify-d/shared-ui';
+import { Button, Link } from '@certify-d/shared-ui';
 import { NextPage } from 'next';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 const LoginPage: NextPage = () => {
+  const router = useRouter();
+
   return (
     <Login
-      createAccountBtn={({ href, passHref }) => (
-        <NextLink href={href} passHref={passHref}>
-          <Link>Create account</Link>
-        </NextLink>
+      createAccountBtn={({ href }) => (
+        <Button variant={'link'} mt={4} onClick={() => router.push(href)}>
+          Create account
+        </Button>
       )}
       registerAccountBtn={({ href, passHref }) => (
-        <NextLink href={href} passHref={passHref}>
-          <Link>Recover your account</Link>
-        </NextLink>
+        <Button variant={'link'} mt={4} onClick={() => router.push(href)}>
+          Recover your account
+        </Button>
       )}
     />
   );

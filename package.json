@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "proxy:https": "npx local-ssl-proxy --source 4201 --target 4200"
   },
   "private": true,
   "dependencies": {

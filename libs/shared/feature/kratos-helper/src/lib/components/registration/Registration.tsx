@@ -8,6 +8,7 @@ import kratos from '../../config/kratos';
 import { handleFlowError } from '../../utils/errors';
 import { Flow } from '../auth-flow';
 import { AxiosError } from 'axios';
+import { Grid, GridItem } from '@chakra-ui/react';
 
 /* eslint-disable-next-line */
 export interface RegistrationProps {}
@@ -83,7 +84,14 @@ export function Registration(props: RegistrationProps) {
             return Promise.reject(err);
           })
       );
-  return <Flow flow={flow} onSubmit={onSubmit} />;
+  return (
+    <Grid templateColumns={'repeat(12, 1fr)'}>
+      <GridItem p={{ base: 4, lg: 8 }} colSpan={{ base: 12, lg: 6 }}>
+        <Flow flow={flow} onSubmit={onSubmit} />
+      </GridItem>
+      <GridItem colSpan={{ base: 12, lg: 6 }}></GridItem>
+    </Grid>
+  );
 }
 
 export default Registration;
