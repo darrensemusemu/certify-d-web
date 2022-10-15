@@ -1,17 +1,17 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { UiNode, UiNodeTextAttributes, UiText } from '@ory/kratos-client'
-import { CodeBox, P } from '@ory/themes'
-import styled from 'styled-components'
+import { UiNode, UiNodeTextAttributes, UiText } from '@ory/kratos-client';
+import { CodeBox, P } from '@ory/themes';
+import styled from 'styled-components';
 
 interface Props {
-  node: UiNode
-  attributes: UiNodeTextAttributes
+  node: UiNode;
+  attributes: UiNodeTextAttributes;
 }
 
 const ScrollableCodeBox = styled(CodeBox)`
   overflow-x: auto;
-`
+`;
 
 const Content = ({ node, attributes }: Props) => {
   switch (attributes.text.id) {
@@ -28,7 +28,7 @@ const Content = ({ node, attributes }: Props) => {
             <code>{text.id === 1050014 ? 'Used' : text.text}</code>
           </div>
         )
-      )
+      );
       return (
         <div
           className="container-fluid"
@@ -36,15 +36,15 @@ const Content = ({ node, attributes }: Props) => {
         >
           <div className="row">{secrets}</div>
         </div>
-      )
+      );
   }
 
   return (
     <div data-testid={`node/text/${attributes.id}/text`}>
       <ScrollableCodeBox code={attributes.text.text} />
     </div>
-  )
-}
+  );
+};
 
 export const NodeText = ({ node, attributes }: Props) => {
   return (
@@ -54,5 +54,5 @@ export const NodeText = ({ node, attributes }: Props) => {
       </P>
       <Content node={node} attributes={attributes} />
     </>
-  )
-}
+  );
+};

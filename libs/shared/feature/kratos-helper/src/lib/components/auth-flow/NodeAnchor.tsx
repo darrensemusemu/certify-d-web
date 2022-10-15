@@ -1,9 +1,9 @@
-import { UiNode, UiNodeAnchorAttributes } from '@ory/kratos-client'
-import { Button } from '@ory/themes'
+import { Button } from '@certify-d/shared-ui';
+import { UiNode, UiNodeAnchorAttributes } from '@ory/kratos-client';
 
 interface Props {
-  node: UiNode
-  attributes: UiNodeAnchorAttributes
+  node: UiNode;
+  attributes: UiNodeAnchorAttributes;
 }
 
 export const NodeAnchor = ({ node, attributes }: Props) => {
@@ -11,12 +11,12 @@ export const NodeAnchor = ({ node, attributes }: Props) => {
     <Button
       data-testid={`node/anchor/${attributes.id}`}
       onClick={(e) => {
-        e.stopPropagation()
-        e.preventDefault()
-        window.location.href = attributes.href
+        e.stopPropagation();
+        e.preventDefault();
+        window.location.href = attributes.href;
       }}
     >
       {attributes.title.text}
     </Button>
-  )
-}
+  );
+};

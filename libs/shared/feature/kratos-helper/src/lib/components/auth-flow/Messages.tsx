@@ -1,30 +1,32 @@
-import { UiText } from '@ory/kratos-client'
-import { Alert, AlertContent } from '@ory/themes'
+import { Alert, AlertIcon } from '@chakra-ui/react';
+import { UiText } from '@ory/kratos-client';
 
 interface MessageProps {
-  message: UiText
+  message: UiText;
 }
 
 export const Message = ({ message }: MessageProps) => {
   return (
-    <Alert severity={message.type === 'error' ? 'error' : 'info'}>
-      <AlertContent data-testid={`ui/message/${message.id}`}>
-        {message.text}
-      </AlertContent>
+    <Alert
+      data-testid={`ui/message/${message.id}`}
+      status={message.type === 'error' ? 'error' : 'info'}
+    >
+      <AlertIcon />
+      There was an error processing your request
     </Alert>
-  )
-}
+  );
+};
 
 interface MessagesProps {
-  messages?: Array<UiText>
+  messages?: Array<UiText>;
 }
 
 export const Messages = ({ messages }: MessagesProps) => {
   console.log(messages);
-  
+
   if (!messages) {
     // No messages? Do nothing.
-    return null
+    return null;
   }
 
   return (
@@ -33,5 +35,5 @@ export const Messages = ({ messages }: MessagesProps) => {
         <Message key={message.id} message={message} />
       ))}
     </div>
-  )
-}
+  );
+};
