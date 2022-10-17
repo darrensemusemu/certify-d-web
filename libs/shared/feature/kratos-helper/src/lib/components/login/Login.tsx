@@ -2,7 +2,6 @@ import {
   SelfServiceLoginFlow,
   SubmitSelfServiceLoginFlowBody,
 } from '@ory/kratos-client';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect, ReactNode } from 'react';
 import kratos from '../../config/kratos';
@@ -10,8 +9,9 @@ import useLogoutHandler from '../../hooks/use-logout-handler/useLogoutHandler';
 import { handleFlowError } from '../../utils/errors';
 import { Flow } from '../auth-flow';
 import { AxiosError } from 'axios';
+import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
 
-interface IAccountLinkBtn {
+export interface IAccountLinkBtn {
   href: string;
   passHref: boolean;
 }
@@ -19,6 +19,7 @@ interface IAccountLinkBtn {
 export interface LoginProps {
   createAccountBtn: React.FC<IAccountLinkBtn>;
   registerAccountBtn: React.FC<IAccountLinkBtn>;
+  rightNode?: ReactNode;
 }
 
 export function Login({
@@ -107,19 +108,27 @@ export function Login({
           })
       );
   return (
-    <>
-      <Flow onSubmit={onSubmit} flow={flow} />
-
-      {aal || refresh ? (
-        <div onClick={onLogout}>Log out</div>
-      ) : (
-        <>
-          <CreateAccountBtn passHref href="/auth/registration" />
-          <br />
-          <RegisterAccountBtn passHref href="/auth/recovery" />
-        </>
-      )}
-    </>
+    <Grid h={'80vh'} templateColumns={'repeat(12, 1fr)'}>
+      <GridItem px={{ base: 4, lg: 16 }} colSpan={{ base: 12, lg: 6 }}>
+        <Flex h={'full'} direction={'column'} justifyContent="center">
+          <Box>
+            <Flow flow={flow} onSubmit={onSubmit} />
+            {aal || refresh ? (
+              <div onClick={onLogout}>Log out</div>
+            ) : (
+              <>
+                <CreateAccountBtn passHref href="/auth/registration" />
+                <br />
+                <RegisterAccountBtn passHref href="/auth/recovery" />
+              </>
+            )}
+          </Box>
+        </Flex>
+      </GridItem>
+      <GridItem colSpan={{ base: 12, lg: 6 }}>
+        <Box h="full">{props.rightNode}</Box>
+      </GridItem>
+    </Grid>
   );
 }
 

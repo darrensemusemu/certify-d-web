@@ -1,5 +1,5 @@
 import { Button } from '@certify-d/shared-ui';
-import { Registration } from '@certify-d/kratos-helper';
+import { Recovery } from '@certify-d/kratos-helper';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 
@@ -8,7 +8,7 @@ const LoginPage: NextPage = () => {
 
   return (
     <div>
-      <Registration
+      <Recovery
         loginAccountBtn={({ href }) => (
           <Button variant={'link'} mt={4} onClick={() => router.push(href)}>
             Sign in

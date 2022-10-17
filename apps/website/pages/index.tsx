@@ -13,14 +13,14 @@ import {
 } from '@certify-d/website-ui';
 import { TriangleDownIcon } from '@chakra-ui/icons';
 import { Box } from '@chakra-ui/react';
-import Image from 'next/image';
 import NextLink from 'next/link';
 import { Children } from 'react';
 import styles from './index.module.scss';
 
 export function Index() {
   const phoneIllustration = (
-    <Image
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
       alt="phone illustration"
       src={'/static/images/phone-illustration.svg'}
       height={331}
