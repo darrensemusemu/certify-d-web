@@ -8,7 +8,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <SharedUiProvider>
       <Head>
-        <title>Welcome to webapp!</title>
+        <title>Certify-d - Dashboard</title>
       </Head>
       <Navbar links={[]} />
       <main className="app">

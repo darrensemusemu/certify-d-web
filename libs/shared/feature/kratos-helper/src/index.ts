@@ -1,3 +1,5 @@
+export * from './lib/components/error/Error';
+export * from './lib/components/verification/Verification';
 export * from './lib/components/recovery/Recovery';
 export * from './lib/components/login/Login';
 export * from './lib/components/registration/Registration';
