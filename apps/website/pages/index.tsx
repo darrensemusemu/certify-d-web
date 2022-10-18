@@ -49,9 +49,13 @@ export function Index() {
             <Text my={4}>
               Generate certified copies of official primary documents
             </Text>
-            <Button my={4} w={120}>
-              Get started
-            </Button>
+            <NextLink href="/dash/auth/login" passHref>
+              <Link>
+                <Button my={4} w={120}>
+                  Get started
+                </Button>
+              </Link>
+            </NextLink>
           </Box>
         </HomeContainer>
       </div>
