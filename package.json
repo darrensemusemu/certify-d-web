@@ -5,6 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "deploy:cloudflare:pages": "npx wrangler pages publish dist/apps/$NX_APP/exported --project-name=certify-d-$NX_APP",
+    "export": "nx export",
     "test": "nx test",
     "proxy:https": "npx local-ssl-proxy --source 4201 --target 4200"
   },
