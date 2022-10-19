@@ -72,7 +72,9 @@ export function Registration({
     router
       // On submission, add the flow ID to the URL but do not navigate. This prevents the user loosing
       // his data when she/he reloads the page.
-      .push(`/auth/registration?flow=${flow?.id}`, undefined, { shallow: true })
+      .push(`/dash/auth/registration?flow=${flow?.id}`, undefined, {
+        shallow: true,
+      })
       .then(() =>
         kratos
           .submitSelfServiceRegistrationFlow(String(flow?.id), values)
@@ -105,7 +107,7 @@ export function Registration({
         <Flex h={'full'} direction={'column'} justifyContent="center">
           <Box>
             <Flow flow={flow} onSubmit={onSubmit} />
-            <LoginAccountBtn passHref href="/auth/login" />
+            <LoginAccountBtn passHref href="/dash/auth/login" />
           </Box>
         </Flex>
       </GridItem>
