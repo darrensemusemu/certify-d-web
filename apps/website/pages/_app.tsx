@@ -1,5 +1,7 @@
 import {
   Footer,
+  Link,
+  Logo,
   Navbar,
   NavbarLink,
   SharedUiProvider,
@@ -7,6 +9,7 @@ import {
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import NextLink from 'next/link';
 import './styles.css';
 
 const navbarLinks: NavbarLink[] = [
@@ -26,6 +29,13 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <Navbar
         links={navbarLinks}
+        logo={
+          <NextLink href={'/'} passHref>
+            <Link>
+              <Logo variant="light" />
+            </Link>
+          </NextLink>
+        }
         extraBtn={{
           title: 'Login',
           onClick: () => router.replace('/dash/auth/login'),

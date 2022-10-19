@@ -1,12 +1,13 @@
 import { Button, Logo, Link } from '@certify-d/shared-ui';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Box, Grid, GridItem, HStack, Stack } from '@chakra-ui/react';
-import { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import styles from './Navbar.module.scss';
 
 export interface NavbarProps {
   links: NavbarLink[];
   extraBtn?: NavbarLinkExtraBtn;
+  logo: ReactNode;
 }
 
 export interface NavbarLinkExtraBtn {
@@ -34,9 +35,7 @@ export function Navbar(props: NavbarProps) {
           className={styles['centerItems']}
         >
           <Stack pl={{ base: 4, lg: 16 }} spacing={'32'} direction={'row'}>
-            <HStack spacing={'4'}>
-              <Logo variant="light" />
-            </HStack>
+            <HStack spacing={'4'}>{props.logo}</HStack>
           </Stack>
         </GridItem>
         <GridItem colSpan={6}>
