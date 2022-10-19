@@ -29,7 +29,7 @@ export function useLogoutHandler(deps?: DependencyList) {
     if (logoutToken) {
       kratos
         .submitSelfServiceLogoutFlow(logoutToken)
-        .then(() => router.push('/dash/auth/login'))
+        .then(() => router.push('/auth/login'))
         .then(() => router.reload());
     }
   };

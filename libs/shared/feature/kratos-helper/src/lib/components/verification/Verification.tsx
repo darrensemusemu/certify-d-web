@@ -45,7 +45,7 @@ export function Verification({
             // eslint-disable-next-line no-fallthrough
             case 403:
               // Status code 403 implies some other issue (e.g. CSRF) - let's reload!
-              return router.push('/dash/auth/verification');
+              return router.push('/auth/verification');
           }
 
           throw err;
@@ -76,9 +76,7 @@ export function Verification({
     router
       // On submission, add the flow ID to the URL but do not navigate. This prevents the user loosing
       // his data when she/he reloads the page.
-      .push(`/dash/auth/verification?flow=${flow?.id}`, undefined, {
-        shallow: true,
-      })
+      .push(`/auth/verification?flow=${flow?.id}`, undefined, { shallow: true })
       .then(() =>
         kratos
           .submitSelfServiceVerificationFlow(
@@ -108,7 +106,7 @@ export function Verification({
         <Flex h={'full'} direction={'column'} justifyContent="center">
           <Box>
             <Flow onSubmit={onSubmit} flow={flow} />
-            <LoginAccountBtn passHref href="/dash/auth/login" />
+            <LoginAccountBtn passHref href="/auth/login" />
           </Box>
         </Flex>
       </GridItem>

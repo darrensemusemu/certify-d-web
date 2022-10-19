@@ -67,9 +67,7 @@ export function Recovery({
     router
       // On submission, add the flow ID to the URL but do not navigate. This prevents the user loosing
       // his data when she/he reloads the page.
-      .push(`/dash/auth/recovery?flow=${flow?.id}`, undefined, {
-        shallow: true,
-      })
+      .push(`/auth/recovery?flow=${flow?.id}`, undefined, { shallow: true })
       .then(() =>
         kratos
           .submitSelfServiceRecoveryFlow(String(flow?.id), values, undefined)
@@ -96,7 +94,7 @@ export function Recovery({
         <Flex h={'full'} direction={'column'} justifyContent="center">
           <Box>
             <Flow onSubmit={onSubmit} flow={flow} />
-            <LoginAccountBtn passHref href="/dash/auth/login" />
+            <LoginAccountBtn passHref href="/auth/login" />
           </Box>
         </Flex>
       </GridItem>

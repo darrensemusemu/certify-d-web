@@ -38,7 +38,7 @@ export function Error(props: ErrorProps) {
           // eslint-disable-next-line no-fallthrough
           case 410:
             // The error id expired. Let's just redirect home!
-            return router.push('/dash/auth/login');
+            return router.push('/auth/login');
         }
 
         return Promise.reject(err);
