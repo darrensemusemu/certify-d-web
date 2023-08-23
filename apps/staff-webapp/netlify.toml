@@ -1,9 +1,0 @@
-[build]
-  ignore = "cd ../../ && npx nx-ignore staff-webapp && cd apps/staff-webapp"
-
-[build.environment]
-  KRATOS_PUBLIC_URL = "not so secret :^)"
-  NETLIFY_USE_YARN = "true" 
-
-[context.production.environment]
-  KRATOS_PUBLIC_URL = "not so secret"
