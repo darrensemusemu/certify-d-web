@@ -2,17 +2,5 @@
   "name": "certify-d-web",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "deploy:cloudflare:pages": "npx wrangler pages publish dist/apps/$NX_APP/exported --project-name=certify-d-$NX_APP",
-    "proxy:https": "npx local-ssl-proxy --source $SSL_PROXY_SOURCE_PORT --target $SSL_PROXY_TARGET_PORT"
-  },
-  "private": true,
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
-  "workspaces": [
-    "apps/*",
-    "libs/**"
-  ]
+  "private": true
 }
